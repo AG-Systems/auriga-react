@@ -51,9 +51,11 @@ cd client
 
 mkdir views
 
+cd views
+
 touch Main.js Home.js About.js
 
-cd ../
+cd -  (does not work with windows)
 
 cd components
 
