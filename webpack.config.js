@@ -1,8 +1,9 @@
 /*
     ./webpack.config.js
 */
-const path = require('path');
 
+const path = require('path');
+const url_project = process.env.C9_HOSTNAME
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './client/index.html',
@@ -18,7 +19,8 @@ module.exports = {
   devServer: {
     compress: true,
     disableHostCheck: true, 
-    public: 'http://react-build-ag-systems.c9users.io'
+    // public: 'http://react-build-ag-systems.c9users.io'
+    public: url_project
   },
   module: {
     loaders: [
